@@ -113,7 +113,7 @@ latter of the three have become increasingly popular. For a survey, see for inst
 \cite{deb22}.
 
 \begin{definition}
-    Let \(X\) be a simply-connected complex manifold. We say that \(X\) is
+    Let \(X\) be a compact simply-connected K\"ahler manifold. We say that \(X\) is
     hyperk\"ahler if \(H^0(X, \Omega_X^2) = \C \sigma\) for some nowhere
     degenerate holomorphic 2-form \(\sigma\).
 \end{definition}
@@ -141,15 +141,17 @@ fibration. In particular, \(B\) is \(\Q\)-Fano, \(\Q\)-factorial, and log termin
 \cite{mats15}. \(B\) has Picard rank 1, and has the same 
 \(\Q\)-intersection cohomology as \(\mathbb{P}^n\). This fact holds even on the 
 level of Hodge decompositions, in that every non-zero cohomology class on \(B\)
-is Hodge. A large conjecture of Matsushita predicts that \(B \simeq \mathbb{P}^n\) for every
+is Hodge. A central conjecture of Matsushita predicts that \(B \simeq \mathbb{P}^n\) for every
 Lagrangian fibration \(f: X \to B\). This result is known to be true in several cases,
 including when \(B\) is a curve or a surface \cite{huy-xu22}. In fact, Hwang proves
 in \cite{hwa08} that \(B \simeq \mathbb{P}^n\) whenever \(B\) is smooth.
 
-Denote by \(f: X^\circ \to B^\circ\) the smooth fibers of \(f\). We have an associated
+We denote by \(B^\circ \subseteq B\) the complement of the discriminant locus and 
+abuse notation to denote by \(f: X^\circ := X_{B^\circ} \to B^\circ\) the smooth 
+fibration. We have an associated
 period map \(B^\circ \to \leftQ{\mathcal{D}}{\Gamma}\), mapping each Abelian variety
 to its associated weight one Hodge structure. By Torelli, the smooth fibers of \(f\)
-are completely determined by the associated polarized variation of Hodge structures
+are determined up to isogeny by the associated polarized variation of Hodge structures
 \(V_\Q = R^1 f_* \Q_{X^\circ}\). Thus, a common approch for understanding the geometry
 of \(f\) is understanding the structure of local systems underlying variations of 
 Hodge structures on \(B\). \cite{geeman-voisin16} and \cite{bak22} affirm a conjecture
@@ -175,7 +177,7 @@ The isotrivial case was studied in depth by Kim, Laza, and Martin
 \cite{kim-laza-martin23}; we recover their structure theorem
 \cite[Theorem 1.3]{kim-laza-martin23}.
 
-\begin{theorem}[=\Cref{elliptic-curve-theorem}]
+\begin{theorem}[=\Cref{elliptic-curve-theorem}] \label{intro-elliptic-curve-theorem}
     Suppose that \(f: X \to B\) is isotrivial. Then there is an elliptic curve \(E\)
     such that \(E^n\) is isogenous to the smooth fiber \(X_b\) of \(f\).
 \end{theorem}
@@ -187,9 +189,10 @@ over a finite extension field \(K\) of \(\Q\), which we identify with the CM fie
 of the associated elliptic curve.
 
 \begin{theorem}[=\Cref{isotrivial-rep-classification}] 
-    Let \(f: X \to B\) be an isotrivial Lagrangian fibration, and let
-    \(V_\Q \simeq E^n\) as in \Cref{elliptic-curve-theorem}.
-    Then if \(K = \End_{\Q HS}(E)\), there is a splitting of \(V_K\) into
+    Let \(f: X \to B\) be an isotrivial Lagrangian fibration, and let \(E\) be an 
+    elliptic curve for which \(X_b\) is isogeneous to \(E^n\) as in \Cref{intro-elliptic-curve-theorem}.
+    Denote by \(K = \mathrm{End}_{\Q HS}(H^1(E, \Q))\) the CM field of \(E\). There is
+    a splitting of \(V_K\) into
     \(K\)-local systems of rank \(n\), \(V_K = U_1 \oplus U_2\), such that
     \(U_1\) and \(U_2\) are irreducible over \(\C\). Furthermore, 
     \(U_1 \simeq U_2\) if and only if they are defined over \(\Q\).
@@ -197,9 +200,9 @@ of the associated elliptic curve.
 
 Finally, we relate our results to an alternative classification of isotrivial 
 Lagrangian fibrations found in \cite{kim-laza-martin23} to produce a more geometric
-description of the irreducible isotrivial \(V_\C\). This extends the discussion 
-\cite[Remark 1.8]{kim-laza-martin23} expressing the CM structure of the 
-elliptic curve \(E\) to a trivializating cover of the local system \(V_\C\).
+description of the irreducible isotrivial \(V_\C\). This extends the discussion in
+\cite[Remark 1.8]{kim-laza-martin23} relating the CM structure of the 
+elliptic curve \(E\) to a trivializing cover of the local system \(V_\C\).
 
 
 \begin{proposition}[=\Cref{application-isotrivial-real}]
@@ -239,11 +242,11 @@ regular values of \(f\)
 \item \((V_\Q, (\mathcal{V}, \nabla), F^\bullet \mathcal{V}, q)\) the associated 
 variation of Hodge structures, where
 \item \(\mathcal{V} = V \otimes_\Q \mathcal{O}_{B^{\circ}}\) is a bundle equipped 
-with flat connection \(\nabla\)
+with a flat connection \(\nabla\)
 \item \(F^\bullet\) a decreasing filtration of \(\mathcal{O}_{B^\circ}\)-modules on
 \(\mathcal{V}\)
 \item \(q: V_\Q \otimes V_\Q \to \Q_{B^\circ}(-1)\) a polarization form
-\item \(\mathcal{V}^{>-1}\) Deligne's canonical extension to \(\mathcal{V}\) 
+\item \(\mathcal{V}^{>-1}\) Deligne's canonical extension of \(\mathcal{V}\) 
 to \(B^{sm}\), with residue eigenvalues in \((-1, 0]\)
 \item \(V_K = V_\Q \otimes_\Q K\) for \(\Q \subseteq K \subseteq \C\) a field 
 extension
@@ -257,12 +260,12 @@ extension
 
 \section{Structure Theory of Complex Representations}
 
-Before we begin our discussion of complex representation arising from real 
+Before we begin our discussion of complex representations arising from real 
 representations, we review complex variations of Hodge structures. As with 
 rational or real variations, we have two descending filtrations \(F^\bullet\)
-and \(\overline{F}^\bullet\) on \(V\) a \(\C\)-local system, holomorphic and 
+and \(\overline{F}^\bullet\) on a \(\C\)-local system \(V\), which are holomorphic and 
 anti-holomorphic respectively. For a clean summary, see \cite{bak22}. The key
-difference between the more conventional notions of variations of Hodge structure 
+difference with the more conventional notions of variations of Hodge structure 
 comes from the lack of bigrading; since there is no longer a clear notion of 
 complex conjugation, \(V\) only admits a (mono)grading 
 \(V^p := F^p V \cap \overline{F}^{-p} V\).
@@ -288,10 +291,10 @@ following crucial structure theorem for complex variations of Hodge structure.
     \begin{itemize}
         \item[(i)] Each $U_i$ underlies a polarized complex variation of Hodge 
         structures, unique up to shifting the Hodge grading, and
-        \item[(ii)] Each polarizable complex variation of Hodge structure arises from
-        (i) by equipping each $U_i$ with its unique (up to shifts) polarizable complex
-        variation of Hodge structures and each $B_i$ with a polarizable complex 
-        Hodge structure coming from \cite{schmid73}, namely 
+        \item[(ii)] Each polarizable complex variation of Hodge structure of \(V\) 
+        arises from \(\mathrm{(i)}\) by equipping each $U_i$ with its unique (up to shifts) polarizable complex
+        variation of Hodge structures, and equipping each $B_i$ with a polarizable
+        complex Hodge structure coming from \cite{schmid73}, via
         $B_i = \mathrm{Hom}(V, U_i)$.
     \end{itemize}
 \end{proposition}
@@ -300,7 +303,7 @@ The subsequent observation made in \cite{bak22} is that if $V$ is a $\C$-local s
 equipped with a polarized complex variation of Hodge structures, then
 $V =  W_\C$ for some polarized real variation of Hodge structures $W$ 
 if and only if complex conjugation of $V$ flips the Hodge grading. Thus, every
-local system arising from a complex polarizable variation of Hodge structure is
+real local system arising from a real polarizable variation of Hodge structure is
 semi-simple.
 
 This allows us to draw on the following classification theorem, which is a classical
@@ -324,7 +327,7 @@ so we have included a proof below.
 \end{proposition}
 
 In the first case, we say that \(V_\C\) is of \textbf{real type}; in the second, 
-\(V_\C\) is of \textbf{complex type}; and in the third case, \(V_\C\) is of 
+that \(V_\C\) is of \textbf{complex type}; and in the third case, that \(V_\C\) is of 
 \textbf{quaternionic type}.
 
 \begin{proof}
@@ -338,9 +341,9 @@ restriction of the polarization form to $U$ gives a non-degenerate pairing
 \end{equation}
 We may associate to $\varphi$ the maps $\varphi^{\textrm{sym}} = \varphi + \varphi^T$
 and $\varphi^{\textrm{alt}} = \varphi - \varphi^T$, for \(\varphi^T\) the transpose.
-If both maps are non-zero, observe that they are linearly independent. But notice
-that the Hermitian form \( h: U \times \overline{U} \to \C(-d) \) gives a
-similarisomorphism
+If both maps are non-zero, observe that they are linearly independent. Now if we take 
+\(h: U \times \overline{U} \to \C(-d)\) to be the Hermitian form associated to the
+polarization \(q\), we get a similar isomorphism 
 \begin{equation}
     \psi: \overline{U} \to U^\vee, \quad \overline{z} \mapsto h(-, \overline{z}).
 \end{equation}
@@ -383,12 +386,12 @@ Now suppose that $\lambda > 0$. Rescaling $\sigma$ by $\lambda^{-\frac{1}{2}}$, 
 $\sigma^2 = \mathrm{id}$. Let $\text{Res}_{\C/\R}(U)$ be the underlying
 $\R$-vector space, and consider the induced map 
 \((\sigma - \mathrm{id}): \text{Res}_{\C/\R}(U) \to \text{Res}_{\C/\R}(U)\).
-This map has a half-dimensional kernel, namely the 1-eigenspace, which we denote $W$.
-Noting that $W_\C = U$ shows that $W$ must be irreducible,
+This map has a half-dimensional kernel, namely the 1-eigenspace of \(\sigma\), which
+we denote $W$. Noting that $W_\C = U$ shows that $W$ must be irreducible,
 placing us in the first case. Alternatively, suppose that $\lambda < 0$.
-Rescaling $h$ by $\lambda^{-\frac{1}{2}}$,
-we get $\sigma^2 = -\mathrm{id}$. We can see that $U$ has no underlying real structure,
-as such a structure comes with a symmetric form, and as we have shown above, all forms
+Rescaling $h$ by $(-\lambda)^{-\frac{1}{2}}$,
+we get $\sigma^2 = -\mathrm{id}$. We can see that $U$ has no underlying real structure:
+indeed, such a structure comes with a symmetric form and, as we have shown above, all forms
 on $U$ are alternating. However, we may define
 \begin{equation}
     \Sigma = \begin{pmatrix}
@@ -398,10 +401,11 @@ on $U$ are alternating. However, we may define
 \end{equation}
 Then we once again have $\Sigma^2 = \textrm{id}$, so as above, we take $W$ to be the
 1-eigenspace of $\text{Res}_{\C/\R}(U^{\oplus 2})$. We must now argue that $W$ is
-irreducible as an $\R$-representation. Suppose not; let \( W = W' \oplus W'', \)
-and notice that \( U^{\oplus 2} = (W')_{\C} \oplus (W'')_{\C}. \)
-Now, $U$ is irreducible, so either $(W')_\C = (W'')_\C = U$, or one of the factors
-is zero. The first case is impossible, as that would imply that $U$ has an underlying
+irreducible as an $\R$-representation. Write \(W = W' \oplus W''\) for some 
+\(\R\)-subrepresentations \(W', W'' \subseteq W\). We will argue that one of 
+\(W', W''\) is zero. Tensor by \(\C\) to get \(U^{\oplus 2} = (W')_{\C} \oplus (W'')_{\C}\).
+$U$ is irreducible, so either $(W')_\C = (W'')_\C = U$, or one of the factors
+is zero. The former is impossible, as that would imply that $U$ has an underlying
 real structure $W'$. This proves that $W$ is irreducible, putting us in the third case.
 \end{proof}
 
@@ -411,8 +415,8 @@ irreducible complex subrepresentations of every type, as we will see later.
 In particular, we have the following corollary.
 
 \begin{corollary}\label{proof-of-rep-classification}
-    Let \(U\) be an irreducible complex variation of Hodge structures, with 
-    \(U \simeq \overline{U}\). Then \(h^0(\text{Sym}^2 U) = \C\varphi \neq 0\) 
+    Let \(U\) be an irreducible complex variation of Hodge structures with 
+    \(U \simeq \overline{U}\). Then \(h^0(\mathrm{Sym}^2 U) = \C\varphi \neq 0\) 
     if and only if \(U\) is of real type, and \(h^0(\bigwedge^2 U) = \C \varphi \neq 0\)
     if and only if \(U\) is of quaternionic type.
 \end{corollary}
@@ -430,20 +434,20 @@ by studying the global sections of \(\bigwedge^2 V_\R\).
     \cite{del71}, the map
     \begin{equation}
         \label{deligne-inv-cycles}
-        H^2(X, \R) \to H^0(B^\circ, R^2 \pi_* \R_{X^\circ})
+        H^2(X, \R) \to H^0(B^\circ, R^2 f_* \R_{X^\circ})
     \end{equation}
     is surjective. In particular, the dimension of the codomain of
     \eqref{deligne-inv-cycles} is at most 1. Note that
-    $R^2 \pi_* \R_{X^\circ} = \bigwedge^2 V_\R$, so if $V_\R$ split as a variation,
+    $R^2 f_* \R_{X^\circ} = \bigwedge^2 V_\R$, so if $V_\R$ split as a variation,
     the space of sections of $\bigwedge^2 V_\R$ would be greater than one-dimensional,
     a contradiction.
 \end{proof}
 
 \begin{remark}
-Throughout this paper, \(X\) and \(B\) are assumed to be compact. This is not 
-strictly necessary of an assumption for many of our tools 
+Throughout this paper, \(X\) and \(B\) are assumed to be compact. This assumption 
+is not strictly necessary for many of our tools 
 (i.e. \Cref{deligne-structure-theorem}, \Cref{proof-of-rep-classification},
-\Cref{deligne-ext}), but \Cref{real-irreducibility} is not guarenteed when \(B\)
+\Cref{deligne-ext}), but \Cref{real-irreducibility} is not guaranteed when \(B\)
 is non-compact. 
 \end{remark}
 
@@ -489,13 +493,13 @@ where \(\mathcal{E}\) is not a bundle.
 A maximal invariant subvariety of dimension \(r\) is called a leaf of \(\mathcal{E}\).
 \end{definition}
 
-On the regular locus of the foliation, this definition, coupled with a generalization
-of the classical Frobenius theorem,  ensures the existance of smooth submanifolds
+On the regular locus of the foliation, a generalization
+of the classical Frobenius theorem ensures the existence of smooth submanifolds
 whose tangent bundles recover \(\mathcal{E}\). For details, see for instance 
 \cite[Proposition 1.3.3]{bog-mcq16}. However, despite the fact that \(\mathcal{E}\)
 is an algebraic sheaf, it is generally false that the leaves of \(\mathcal{E}\)
 are themselves algebraic. To this end, Bogomolov and McQuillan give a sufficient
-condition to ensure the existance of rationally-connected algebraic leaves. 
+condition to ensure the existence of rationally connected algebraic leaves. 
 
 
 
@@ -513,7 +517,7 @@ we will sketch their argument to show that the leaf \(Z\) is algebraic.
 \begin{proof}
 To begin, notice that over the curve \(C\), the foliation has locally the structure
 of a fibration \(Z_\Delta \to \Delta \subseteq C\). It is possible that when we try
-to extend this structure globally, the leaves \(Z_\alpha\) may intersect \(C\) at
+to extend this structure globally, the leaves \(Z_\alpha\) intersect \(C\) at
 more than one point. Thus, we instead consider the graph \(\Gamma\) of the inclusion
 \(C \to B\). This sits as a curve inside the product \(C \times B\), and
 \(\mathcal{E}\) naturally pulls back to a foliation on this product, with leaves
@@ -523,7 +527,7 @@ two leaves through \(\Gamma\) map to the same leaf \(Z \subseteq B\) if and only
 if \(Z\) meets \(C\) twice. Thus we produce a fibration \(W \to \Gamma\).
 
 We aim to show that the total space \(W\) is algebraic. This will show that each of
-the individual fibers is algebraic, thereby making its image in \(B\) algebraic.
+the individual fibers is algebraic, thereby making its images in \(B\) algebraic.
 Let \(r\) be the rank of \(\mathcal{E}\); we need to show that the Zariski closure
 \(\overline{W}\) of \(W\) has the expected dimension \(r+1\).
 We proceed asymtotically: if \(\mathcal{L}\) is any line bundle on \(\overline{W}\), 
@@ -547,18 +551,19 @@ infinitesimal thickening of \(\overline{W}\), we have the exact sequence
 Here \(N_{\Gamma / W}\) is the normal bundle of \(\Gamma\). But notice that 
 by construction, it admits a natural map \(\mathcal{F} \to N_{\Gamma / W}\)
 from the pullback of \(\mathcal{E}\), which is generically an isomorphism.
-By assumption, \(\mathcal{F}\) is positive, there is some
-\(m \leq C(\mathcal{L}) \cdot n\) above which the left term of
+By assumption, \(\mathcal{F}\) is positive, so there is some
+\(m = C(\mathcal{L})' \cdot n\) above which the left term of
 \eqref{eq-principal-parts} vanishes. Thus
 \begin{align*}
     h^0(\widehat{W}, \mathcal{L}^{\otimes n}) 
     &= h^0(W_m, \mathcal{L}^{\otimes n}) \\
     &\leq \sum_{k=0}^m h^0(\Gamma, \text{Sym}^k N_{\Gamma / W}^\vee 
         \otimes \mathcal{L}^{\otimes n}) \\
-    &\leq \sum_{k=0}^m C'(\mathcal{L}) \cdot n^r \\
-    &= C'(\mathcal{L}) \cdot m \cdot n^{r+1}
+    &\leq \sum_{k=0}^m C(\mathcal{L})'' \cdot n^r \\
+    &= C(\mathcal{L})' \cdot C(\mathcal{L})'' \cdot n^{r+1}
 \end{align*}
-Here \(C'(\mathcal{L})\) and \(m\) both only depend on \(\mathcal{L}\), as required.
+Setting \(C(\mathcal{L}) = C(\mathcal{L})' \cdot C(\mathcal{L})''\) gives the
+required bound.
 \end{proof}
 
 
@@ -584,9 +589,9 @@ In fact, we can say much more about the decomposition of \(V_\C\) into irreducib
     structures $U$,
     \begin{equation*}
         V_\C = \begin{cases}
-        U \\
-        U \oplus U \\
-        U \oplus \overline{U}
+        U & \text{if } V_\C \text{ has real type}\\
+        U \oplus \overline{U} & \text{if } V_\C \text{ has complex type}\\
+        U \oplus U & \text{if } V_\C \text{ has quaternionic type}
     \end{cases}.
     \end{equation*}
 \end{lemma}
@@ -635,10 +640,13 @@ which is of maximal variation. By \Cref{mv-rep-classification}, the associated
 complex variation of Hodge structures \(V_\C = U\) is irreducible; otherwise, 
 each of the irreducible factors would have to be one-dimensional, thereby failing 
 to be of level one. Consider the associated \(\text{K3}^{[n]}\)-type Lagrangian 
-fibration; it comes with the induced maps
-\(\left(X^{[n]}\right)^\circ \to (\mathbb{P}^n)^\circ\) the locus of 
-smooth fibers of \(f^{[n]}\), and \(X^\circ \to U\) the smooth fibers of 
-\(f\). We have a rational map \(U^n \to U^{(n)} \dashrightarrow \mathbb{P}^n\)
+fibration; let \((\mathbb{P}^n)^\circ\) be the complement of the discriminant of 
+\(f^{[n]}\) in \(\mathbb{P}^n\).
+Denote by \(\left(X^{[n]}\right)^\circ \to (\mathbb{P}^n)^\circ\)
+the restriction of \(f^{[n]}\) to the preimage of \((\mathbb{P}^n)^\circ\).
+Likewise, let \(U \subseteq \mathbb{P}^1\) be the complement of the discriminant of \(f\),
+and \(X^\circ \to U\) be the restriction of \(f\) to \(f^{-1}(U)\).
+We have a rational map \(U^n \to U^{(n)} \dashrightarrow \mathbb{P}^n\)
 to the \(n\)-th symmetric power of \(U\); let
 \((U^n)^\circ \subseteq (\mathbb{P}^1)^n\) be the locus on which it is regular. This 
 gives us the diagram
@@ -676,26 +684,26 @@ space of every dimension.
 
 We will soon see every Lagrangian fibration of maximal variation is of real type.
 Consider the map \(f: X \to B\) on three levels:
-% https://q.uiver.app/#q=WzAsNixbMCwwLCJYXlxcY2lyYyJdLFswLDEsIkJeXFxjaXJjIl0sWzEsMCwiWF97Ql57c219fSJdLFsxLDEsIkJee3NtfSJdLFsyLDAsIlgiXSxbMiwxLCJCIl0sWzAsMV0sWzIsM10sWzQsNV0sWzEsMywiaSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsNSwiaiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiw0LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==
-\[\begin{tikzcd}
-	{X^\circ} & {X_{B^{sm}}} & X \\
-	{B^\circ} & {B^{sm}} & B
-	\arrow[hook, from=1-1, to=1-2]
-	\arrow[from=1-1, to=2-1]
-	\arrow[hook, from=1-2, to=1-3]
-	\arrow[from=1-2, to=2-2]
-	\arrow[from=1-3, to=2-3]
-	\arrow["i"', hook, from=2-1, to=2-2]
-	\arrow["j"', hook, from=2-2, to=2-3]
-\end{tikzcd}\]
-Here \(X_{B^{sm}} \to B^{sm}\) is the restriction of \(f\) to the smooth part of 
-\(B\), and \(X^\circ \to B^\circ\) is the further restriction to the smooth fibers.
+\begin{equation*}
+\begin{tikzcd}
+	{X^\circ} \arrow[hook, r] \arrow[d] & {X_{B^{sm}}} \arrow[hook, r] \arrow[d] & X \arrow[d]\\
+	{B^\circ} \arrow[hook, r, "i"] & {B^{sm}} \arrow[hook, r, "j"] & B
+\end{tikzcd}
+\end{equation*}
+Here \(B^{sm}\) is the non-singular locus of \(B\), and \(X_{B^{sm}} \to B^{sm}\) the 
+pullback of \(f\). Likewise, \(B^\circ \subseteq B^{sm}\) is the complement of the
+discriminant of \(X_{B^{sm}} \to B^{sm}\), and \(X^{\circ} \to B^\circ\) is the 
+associated pullback.
 
 Let $(\mathcal{V}, \nabla, F^{\bullet})$ be the flat bundle on \(B^\circ\)
-associated to \(V\), equipped with sub-bundle $F^1\mathcal{V}$. By a formulation of
-Matsushita's theorem due to Schnell \cite[\S 4]{schnell23},
+associated to \(V\), equipped with the sub-bundle $F^1\mathcal{V}$. A theorem of 
+Matsushita \cite[Theorem 1.2]{mats05} states that when \(B\) is smooth and 
+\(X\) is projective, we have an isomorphism \(R^1 f_* \mathcal{O}_X \simeq \Omega_B^1\).
+Schnell \cite[\S 4]{schnell23} vastly generalizes this result, showing that one only 
+needs the total space to be holomorphic symplectic and K\"ahler. In particular,
 \(R^1 f_* \mathcal{O}_{X_{B^{sm}}} \simeq \Omega_{B^{sm}}^1\).
-If we further restrict to \(B^\circ\) and take duals, we get
+
+If we further restrict to \(X^\circ\) and take duals, we get
 \(T_{B^\circ} \simeq f_* \Omega_{X^\circ/B^\circ}^1 = F^1 \mathcal{V}.\)
 In fact, Bakker and Schnell use Saito's theory of Hodge modules to extend this 
 isomorphism over \(B^{sm}\).
@@ -707,7 +715,7 @@ isomorphism over \(B^{sm}\).
 Now we are finally prepared to refine \Cref{mv-rep-classification}. While 
 dimension-counting has narrowed down the types of isotypic decomposition which 
 may occur to only three cases, it has failed to rule out the possibility
-that \(V_\C\) may be of complex type or quaternionic.
+that \(V_\C\) may be of complex type or quaternionic type.
 
 \begin{theorem} \label{mv-real-type}
     The monodromy representation associated to any maximal variation Lagrangian
@@ -715,7 +723,7 @@ that \(V_\C\) may be of complex type or quaternionic.
 \end{theorem}
 \begin{proof}
 Suppose that $V_\C$ were quaternionic, i.e. $V_\C = U^{\oplus 2}$, for $U$ complex
-irreducible. Take \(\mathcal{U}\) to be flat bundle on \(B^\circ \)associated to
+irreducible. Take \(\mathcal{U}\) to be the flat bundle on \(B^\circ\) associated to
 \(U\); we naturally have \(\mathcal{V} = \mathcal{U}^{\oplus 2}\). Since 
 this is a decomposition on the level of variations of Hodge structure, 
 \(T_{B^\circ} \simeq F^1 \mathcal{V} = \left(F^1 \mathcal{U}\right)^{\oplus 2}\).
@@ -746,7 +754,7 @@ on $\mathcal{V}$, i.e.
 \begin{equation} \label{eq-tangent-bundle-local}
     T_{B^\circ} \simeq F^1 \mathcal{V} = F^1 \mathcal{U}_1 \oplus F^1 \mathcal{U}_2.
 \end{equation}
-Now apply Lemma \ref{deligne-ext} to get a splitting of \(T_{B^{sm}}\) as
+Now apply \Cref{deligne-ext} to get a splitting of \(T_{B^{sm}}\) as
 \begin{equation}
     T_{B^{sm}} \simeq \left(\mathcal{U}_1^{>-1} \cap i_*(F^1 \mathcal{U}_1) \right)
     \oplus \left(\mathcal{U}_2^{>-1} \cap i_*(F^1 \mathcal{U}_2)\right)
@@ -755,9 +763,9 @@ Now apply Lemma \ref{deligne-ext} to get a splitting of \(T_{B^{sm}}\) as
 Note that both \(\mathcal{E}_1\) and \(\mathcal{E}_2\) are foliations. Their 
 integrability follows from \cite[Lemma 3.3]{bak-sch23}. We will now show that 
 at any general point of \(B^{sm}\), at least one of the two foliations admits an
-algebraically integrable subfoliation. This will imply that a general point of
-\(B^{sm}\) is contained in a closed subscheme of \(B^{sm}\) along which the period
-map drops rank, contradicting our assumption that \(f\) is of maximal variation.
+algebraically integrable subfoliation. Such foliations are induced by morphisms 
+\(\pi: B \to W\), which will produce a non-trivial \(\Q\)-subvariation 
+of \(V\), contradicting \Cref{real-irreducibility}.
 
 Note that \(\det (j_* \mathcal{E}_1) \otimes \det (j_* \mathcal{E}_2) = 
 \omega_{B}^{\vee}\) is \(\Q\)-ample. By \cite[Theorem 1.1]{mats15}, \(B\) has 
@@ -788,7 +796,7 @@ However, we may compose this map with the projection
 \eqref{eq-leibniz} dies. This composition is now \(\mathcal{O}_B\)-linear. Moreover,
 since the choice of local section \(v\) was arbitrary, we in reality have a morphism 
 of \(\mathcal{O}_B\)-modules \([-,-]: \mathcal{F}^{\otimes 2} \to 
-\mathcal{E}_1 / \mathcal{F}\). Suppose this morphism was anywhere non-zero; then 
+\mathcal{E}_1 / \mathcal{F}\). Suppose this morphism was non-zero; then 
 there would need to be some graded piece of the Harder-Narasimhan filtration on which
 the Lie bracket had non-zero image, say 
 \begin{equation} \label{eq-hn-tensor}
@@ -814,27 +822,39 @@ member of the complete linear series \(|m_i H|\), and set
 is still the Harder-Narasimhan filtration of \(j_* \mathcal{E}_1|_C\).
 In particular, we see that every filtered piece \(\mathcal{F}_i|_C\) is locally free.
 Since \(j_* \mathcal{E}_1\) was \(\Q\)-Fano, we have \(\mu_H(j_* \mathcal{E}_1) > 0\),
-so it has positive degree on \(C\). Concequently, \(\mathcal{F}|_C\) also has positive
+so it has positive degree on \(C\). Consequently, \(\mathcal{F}|_C\) also has positive
 degree. By a theorem of Hartshorne \cite[Theorem 2.4]{hart71}, \(\mathcal{F}|_C\)
 is ample if and only if every quotient bundle of \(\mathcal{F}|_C\) has positive
 degree. But \(\mathcal{F}|_C\) is the maximal destabilizing subsheaf, so it admits 
-no nontrivial quotients. Thus, by Theorem \ref{bog-mcq-main-theorem}, 
-every leaf of \(\mathcal{F}\) through \(C\) is algebraic.
+no nontrivial quotients. Thus, by \Cref{bog-mcq-main-theorem}, 
+every leaf of \(\mathcal{F}\) through \(C\) is algebraic. Now because \(C\) was general,
+the general leaf of \(\mathcal{F}\) is algebraic,
+or equivalently, \(\mathcal{F}\) is algebraically integrable.
 
-Now take \(Z \subsetneq B^{sm}\) of \(\mathcal{F}\) to be any such leaf. Consider the 
-period map \(\mathcal{P}: B^\circ \to \leftQ{\mathcal{D}}{\Gamma}\);
-we have constructed \(\mathcal{E}_2\) to be perpendicular
-to \(T_Z = \mathcal{F} \subseteq \mathcal{E}_1\). Thus
-\(d\mathcal{P}|_Z\) kills all of \(\mathcal{E}_2|_Z\), so that \(d\mathcal{P}\)
-drops rank along \(C\). This means that \(\mathcal{P}\) is not immersive on any 
-sufficiently general complete intersection curve in \(B\), and consequently at 
-any general point of \(B^\circ\). Therefore \(V_\C\) must not have been of maximal 
-variation, and we have reached our desired contradiction.
+Now, by \cite[Theorem 2.1.9]{chen23}, there exists a morphism \(\pi: B \to W\)
+for \(W\) a smooth variety inducing
+\(\mathcal{F}\), i.e. \(\mathcal{F} = \ker(d\pi)\). Consider the 
+variation of \(\Q\)-Hodge structures \(\pi^*\pi_* V\) on \(B^\circ\). Fiberwise, 
+\((\pi_* V)_w = H^0(B_w^\circ, V)\). Hence, by the theorem of the fixed part
+\cite{schmid73}, \(\pi^*\pi_* V \subseteq V\) is a \(\Q\)-subvariation. Now, since \(V\) is 
+irreducible by \Cref{real-irreducibility}, we must either have equality or vanishing.
+If \(\pi^*\pi_* V = V\), the period map 
+\(\mathcal{P}: B^\circ \to \leftQ{\mathcal{D}}{\Gamma}\) would factor through 
+a Zariski open subset of \(W\). Since \(\dim W < \dim B\), this contradicts the 
+maximal variation assumption.
+
+Thus we must have \(\pi^* \pi_* V = 0\). But for a general point \(w \in W\) we have
+the fiberwise containment
+\begin{equation}
+    (\pi_* \mathcal{V})_w = H^0(B_w^\circ, \mathcal{V}) \supseteq H^0(B_w^\circ, \mathcal{U}_2) \neq 0.
+\end{equation}
+The non-vanishing comes from the fact that \(\mathcal{U}_2\) is fixed along the leaves of 
+\(\mathcal{F} \subseteq j_* \mathcal{E}_1\), by construction. 
 \end{proof}
 
 
 \begin{corollary} \label{complex-irreducibility}
-    \(V_\C\) is irreducible as a \(\C\)-local system.
+    If \(V_\C\) is of maximal variation, it is irreducible as a \(\C\)-local system.
 \end{corollary}
 \begin{proof}
 This follows immediately from \Cref{mv-real-type} and 
@@ -850,14 +870,14 @@ To more cleanly deal with the case where \(f: X \to B\) is isotrivial, we introd
 a definition.
 
 \begin{definition}
-    Let \(\Gamma\) be a finitely generated group, \(K\) a field.
+    Let \(\Gamma\) be a finitely generated group, \(K \subseteq \C\) a field.
     A \(K\)-Hodge representation of \(\Gamma\) is the data of a 
     polarized \(K\)-Hodge structure \((V, \bigoplus_{p+q=w} V_\C^{p,q}, q)\) and 
     a representation \(\rho: \Gamma \to \GL(V, q)\) acting by Hodge automorphisms.
 \end{definition}
 
 
-The notion of a Hodge representation is useful precisely because it captures the 
+The notion of Hodge representation is useful precisely because it captures the 
 data of isotrivial variations of Hodge structure. In particular,
 since \(f\) is isotrivial, we may fix a basepoint \(b \in B^\circ\) and note 
 that \(V_\Q\) has the structure of a weight 1 Hodge representation 
@@ -873,12 +893,11 @@ of \(\pi_1(B^\circ)\).
 
 Now we recover the stucture theorem of Kim, Laza, and Martin.
 \begin{theorem}[\cite{kim-laza-martin23}, Theorem 1.3] \label{elliptic-curve-theorem}
-    There exists an elliptic curve \(E\) along with a morphism of vector spaces 
-    \(H^1(E, \Q)^{\oplus n} \to V_\Q\) which is an isomophism of \(\Q\)-Hodge 
-    structures.
+    There exists an elliptic curve \(E\) along with an isomorphism of \(\Q\)-Hodge 
+    structures \(H^1(E, \Q)^{\oplus n} \to V_\Q\).
 \end{theorem}
 \begin{remark}
-Note also that we do not claim this map to be an isomorphism of Hodge 
+Note that we do not claim this map to be an isomorphism of Hodge 
 representations; indeed, we will see that \(H^1(E, \Q)\) only admits the structure 
 of a Hodge representation locally. Phrased in terms of isotrivial variations,
 this is an identification of Hodge structures between a general fiber of 
@@ -887,10 +906,11 @@ this is an identification of Hodge structures between a general fiber of
 \end{remark}
 \begin{proof}
 Let \(D = B^{sm} \smallsetminus B^{\circ}\). We consider the local monodromy of 
-\(V_\Q\) in a neighborhood \(U \subseteq B^{sm}\) where \(D \cap U\) is 
-smooth. Set \(U^\circ = U \cap B^\circ\), and choose a basepoint \(b \in U^\circ\).
-Let \(T_b\) denote the matrix representing the local monodromy
-operator around \(b\). By \cite[Lemma 3.6]{bak-sch23}, \(T_b\) has only two
+\(V_\Q\) in a small tubular neighborhood \(U \subseteq B^{sm}\) of \(D\) where
+\(D \cap U\) is smooth. Set \(U^\circ = U \cap B^\circ\), and choose a basepoint
+\(b \in U^\circ\). Let \(T_b\) denote the matrix representing the local monodromy
+operator in \(U^\circ\). 
+By \cite[Lemma 3.6]{bak-sch23}, \(T_b\) has only two
 non-trivial conjugate eigenvalues \(\lambda, \overline{\lambda}\) with
 \begin{equation} \label{eq-possible-eigenvalues}
     (\lambda, \overline{\lambda}) \in \{(\zeta_6, \overline{\zeta}_6),
@@ -904,7 +924,7 @@ it is irreducible. Notice that there exists an isotrivial family of elliptic
 curves \(\mathcal{E} \to U^\circ\) with fiber \(E\), such that we have an 
 isomorphism of \(\pi_1(U^\circ)\)-Hodge representations \(H^1(E, \Q) \simeq H\).
 
-There are no Hodge automorphisms between isotypic 
+There are no Hodge morphisms between different isotypic 
 components of a Hodge structure, so \(V_\Q\) has multiple isotypic components 
 as a Hodge structure if and only if it has multiple isotypic components as a 
 Hodge representation. But by \Cref{real-irreducibility}, \(V_\Q\) is
@@ -924,14 +944,14 @@ of \(V_\C\) actually occurs over a degree two extension of \(\Q\).
 \begin{proposition} \label{isotrivial-rep-classification}
     Let \(E\) be the elliptic curve from above, \(H = H^1(E, \Q)\).
     \begin{itemize}
-    \item[(a)] \(V_\C\) is of real type if and only if we have the isomorphism
+    \item[(a)] \(V_\C\) is of real type if and only if we have an isomorphism
     of \(\Q\)-Hodge representations \(V_\Q = H \otimes W\) for \(W\) a
     \(\Q\)-local system irreducible over \(\C\).
-    \item[(b)] \(V_\C\) is of complex type if and only if \(E\)
-    has CM and we have an isomorphism of \(K\)-Hodge representations 
-    \(V_K \simeq V_K^{1,0} \oplus V_K^{0,1}\) for \(K = \End_{\Q HS}(H)\) the 
-    CM field of \(E\), where \(V_K^{1,0}\) and \(V_K^{0,1}\) are 
-    non-isomorphic \(K\)-local systems irreducible over \(\C\).
+    \item[(b)] Let \(K = \mathrm{End}_{\Q HS}(H)\) be the CM field of \(E\).
+    \(V_\C\) is of complex type precisely when \(K \neq \Q\) and there is an 
+    isomorphism of \(K\)-Hodge representations  \(V_K \simeq V_K^{1,0} \oplus V_K^{0,1}\).
+    Here \(V_K^{1,0}\) and \(V_K^{0,1}\) are non-isomorphic \(K\)-local systems which
+    are irreducible over \(\C\).
     \item[(c)] \(V_\C\) is not quaternionic.
     \end{itemize}
 \end{proposition}
@@ -942,29 +962,29 @@ of the form \(V_\C = B \otimes U\), where \(U\) is an irreducible \(\C\)-local s
 However, since \(V_\C\) is isotrivial, \(U\) must have level zero. Since 
 \(V_\C = V^{1,0} \oplus V^{0,1}\), \(B\) must have level one. In particular, it is 
 at least two-dimensional.
-We first claim that \(V_\C\) again cannot be quaternionic. Indeed, if it were, then
+We first claim that \(V_\C\) cannot be quaternionic. Indeed, if it were, then
 by \Cref{proof-of-rep-classification}, \(h^0(\bigwedge^2 U)\) would contain
 an alternating form. Consider the containment
 \(\bigwedge^2 U \oplus \bigwedge^2 U \subseteq \bigwedge^2 V_\C\).
-We know by Deligne's global invariant cycles theorem that 
-\(h^0(V_\C) = 1\), so this containment is impossible, a contradiction.
+We know by Deligne's global invariant cycle theorem that 
+\(h^0 \left(\bigwedge^2 V_\C\right) = 1\), so this containment is impossible, a contradiction.
 
 
-Next, suppose that \(V_\C = B \otimes W_\C\) has real type.  Furthermore, we claim
+Next, suppose that \(V_\C = B \otimes W_\C\) has real type. We claim
 that the dimension of \(B\) is exactly two. Consider once again the containments
 \begin{equation}
     \bigwedge^2 V_\C \supseteq (W_\C^{\otimes 2})^{\oplus \binom{\dim B}{2}}
     \supseteq (\text{Sym}^{2}W_\C)^{\oplus \binom{\dim B}{2}}
 \end{equation}
-Again by global invariant cycles, we know that the \(h^0(\bigwedge^2 V_\C) = 1\).
-But by \Cref{proof-of-rep-classification},
+Again by the global invariant cycle theorem, we know that the 
+\(h^0(\bigwedge^2 V_\C) = 1\). But by \Cref{proof-of-rep-classification},
 \(h^0(\text{Sym}^2 W_\C) = 1\). This forces \(\dim B = 2\).
 
 
 Otherwise, suppose that \(V_\C\) is of complex type, 
 \(V_\C = (B \otimes U) \oplus (\overline{B} \otimes \overline{U})\).
 Then \(B\) and \(\overline{B}\) both have level zero. But now they must both be 
-one-dimensional. If not, any subspace of \(C \subseteq B\) is a Hodge subvariation,
+one-dimensional. If not, any subspace \(C \subseteq B\) is a Hodge subvariation,
 with \((C \otimes U) \oplus (\overline{C} \otimes \overline{U}) \subsetneq V_\C\)
 defined over \(\R\). This contradicts the irreducibility of \(V_\R\) as a Hodge 
 structure. Therefore \(V_\C \simeq U \oplus \overline{U}\).
@@ -982,7 +1002,7 @@ this map is an isomorphism of \(\Q\)-Hodge structures. Now notice that we may
 equip the domain with a Hodge representation, where \(\pi_1(B^\circ)\) acts 
 trivially on \(H\) and \(\gamma . \varphi: h \to \varphi(\gamma h)\) for 
 \(h \in H\) and \(\varphi \in \Hom_{\Q HS}(H, V_\Q)\). This extends the evaluation 
-map to an ismorphism of Hodge representations. In particular, \(V_\C\) has real 
+map to an isomorphism of Hodge representations. In particular, \(V_\C\) has real 
 type.
 
 Now suppose that \(E\) does have CM, \(\End_{\Q HS}(H) = K\) is an imaginary 
@@ -992,7 +1012,7 @@ Hodge structures \(V_K = V_K^{1,0} \oplus V_K^{0,1}\). Moreover, Hodge automorph
 preserve the Hodge grading, so this gives a splitting of the Hodge representation 
 \(V_K = V_K^{1,0} \oplus V_K^{0,1}\) into \(K\)-local systems. If they are 
 non-isomorphic, then \(V_\C = V_\C^{1,0} \oplus V_\C^{0,1}\) is a splitting of 
-\(V_\C\) into non-ismorphic \(\C\)-local systems. As we showed above, 
+\(V_\C\) into non-isomorphic \(\C\)-local systems. As we showed above, 
 this is the complex type case, so that \(V_\C^{1,0}\) and \(V_\C^{0,1}\) are 
 irreducible \(\C\)-local systems. 
 
@@ -1013,7 +1033,7 @@ One may have expected that \(V_\C\) has complex type if and only if \(E\) is CM.
 The reason why it is not sufficient for \(E\) to be CM is because the monodromy 
 may never actually make use of the CM structure. Indeed, \(V_\C\) has complex type
 precisely when there is a local generator \(\gamma \in \pi_1(B^\circ)\) which
-acts on \(H\) by a CM autmorphism.
+acts on \(H\) by a CM automorphism.
 \end{remark}
 
 
@@ -1021,8 +1041,8 @@ acts on \(H\) by a CM autmorphism.
 
 There is an alternative perspective one may take in classifying isotrivial Lagrangian
 fibrations. Given $f: X \to B$, one may ask for the intermediate trivialization
-$\pi: C^\circ \to B^\circ$, the smallest cover of $B$ trivializing
-$R^1 f_*\Q_{X^\circ}$ over the pullback of $B^\circ$. We may then form the pullback
+$\pi: C^\circ \to B^\circ$, the smallest cover of $B^\circ$ trivializing
+$\pi^* R^1 f_*\Q_{X^\circ}$. We may then form the pullback
 diagram
 \begin{equation*}
 \begin{tikzcd}
@@ -1044,8 +1064,8 @@ fibration follow the Kodaira classification of elliptic surface singularities.
     \(\mathrm{II}^*\), \(\mathrm{III}^*\), or \(\mathrm{IV}^*\).
 \end{proposition}
 
-We exibit some examples of isotrivial Lagrangian fibrations over \(\mathbb{P}^1\)
-to show how their classification relates to our own.
+We exibit some examples of isotrival elliptic K3 surfaces
+to show how the classification of \cite{kim-laza-martin23} relates to our own.
 We owe these examples in part to \cite{sawon14}.
 
 \begin{example}
@@ -1071,7 +1091,8 @@ monodromy representation is of complex type.
 \end{example}
 
 \begin{example} \label{example-Kummer-real}
-Take \(E \times E \to E\) for \(E\) an elliptic curve, and quotient by
+Take \(E \times E \to E\) to be projection onto a factor for \(E\) an elliptic curve, 
+and quotient by
 the involution. After blowing up the sixteen fixed points, we get a Lagrangian 
 fibration \(f: X \to \mathbb{P}^1\). Since the map \(E \to \mathbb{P}^1\) has
 four branch points, we see that \(f\) has four singular fibers, each of which is
@@ -1092,7 +1113,7 @@ The associated covering map is \(E \to \mathbb{P}^1\) of degree 2, where
 \begin{example} \label{example-Kummer-complex-1}
 Take \(E \times E \to E\) as in \Cref{example-Kummer-real}, but this time we
 instead fix \(E = \rightQ{\C}{\left<1, \zeta\right>}\) for \(\zeta\) a primitive
-sixth root of unity. Quotient by the diagonal action of the group
+sixth root of unity. Quotienting by the diagonal action of the group
 \begin{equation}
     G = \left<\begin{pmatrix}
         \zeta^2 & 0 \\ 0 & \zeta^{-2}
@@ -1101,14 +1122,14 @@ sixth root of unity. Quotient by the diagonal action of the group
 and blowing up the nine fixed points gives us a Lagrangian fibration 
 \(f: X \to \mathbb{P}^1\). The three singular fibers above each of the fixed points
 of \(\leftQ{E}{\left<\zeta^2\right>}\) consist of \(E_6\) singularities of Kodaira
-type \(\text{IV}^*\). In particular, the local monodromy matrices have the form
+type \(\text{IV}^*\). In particular, the local monodromy matrices all have the form
 \begin{equation*}
     T_b = \begin{pmatrix}
         -1 & -1 \\ 1 & 0
     \end{pmatrix}.
 \end{equation*}
-It has order three, so in particular, it is of complex type. \(B^\circ\) is covered by
-a degree three map from \(E\), so it is of Abelian type.
+They have order three, so in particular, the local system is of complex type. \(B^\circ\) 
+is covered by a degree three map from \(E\), so the fibration is of Abelian type.
 \end{example}
 
 \begin{example}
@@ -1123,7 +1144,7 @@ We once again produce a Lagrangian fibration
     \leftQ{E}{\left<i\right>} \simeq \mathbb{P}^1.
 \end{equation}
 The action of \(G\) on \(E\) has three fixed points, giving three singular fibers.
-Two are of Kodaira class \(\text{III}^*\) with Dynkin diagram \(\widetilde{E}_7\), 
+Two are of Kodaira type \(\text{III}^*\) with Dynkin diagram \(\widetilde{E}_7\), 
 while the last is forced to be \(\text{I}_0^*\) as in \Cref{example-Kummer-real}.
 The new fibers have local monodromy
 \begin{equation}
